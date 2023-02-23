@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_paymee_payment_form" model="ir.ui.view">
+            <field name="name">paymee.payment.form</field>
+            <field name="model">paymee.payment</field>
+            <field name="arch" type="xml">
+                <form string="Pay with Paymee">
+                    <group>
+                        <field name="amount"/>
+                        <field name="note"/>
+                        <field name="first_name"/>
+                        <field name="last_name"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="return_url"/>
+                        <field name="cancel_url"/>
+                        <field name="webhook_url"/>
+                        <field name="order_id"/>
+                    </group>
+                    <footer>
+                        <!--    <button string="Pay" type="object" name="action_pay"/>-->
+                        <!--                        <button string="Pay" type="object" name="action_pay"/>-->
+
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+    <record id="action_paymee_payment_form" model="ir.actions.act_window">
+        <field name="name">Pay with Paymee</field>
+        <field name="res_model">paymee.payment</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_paymee_payment_form"/>
+        <field name="target">new</field>
+    </record>
+    <menuitem id="menu_paymee_payment" name="Pay with Paymee" sequence="10"
+              action="action_paymee_payment_form"/>
+
+</odoo>

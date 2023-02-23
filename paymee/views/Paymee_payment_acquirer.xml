@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_payment_acquirer_form_paymee" model="ir.ui.view">
+        <field name="name">payment.acquirer.form.paymee</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.acquirer_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//group[@name="acquirer"]' position='inside'>
+                <group>
+                    <field name="paymee_api_key" string="Paymee API Key "/>
+                    <field name="paymee_base_url" string="Paymee Base URL"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

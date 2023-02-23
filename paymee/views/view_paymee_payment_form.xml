@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="view_paymee_payment_form" inherit_id="payment.payment_form">
+            <xpath expr="//div[@class='o_payment_form']/div[2]" position="after">
+                <div class="form-group o_payment_custom_field">
+                    <label for="amount_paymee">Amount:</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">$</span>
+                        <input type="number" id="amount_paymee" name="amount_paymee" class="form-control"
+                               required="True" step="any"/>
+                    </div>
+                </div>
+                <div class="form-group o_payment_custom_field">
+                    <label for="note_paymee">Note:</label>
+                    <input type="text" id="note_paymee" name="note_paymee" class="form-control"/>
+                </div>
+                <div class="form-group o_payment_custom_field">
+                    <label for="first_name_paymee">First Name:</label>
+                    <input type="text" id="first_name_paymee" name="first_name_paymee" class="form-control"/>
+                </div>
+                <div class="form-group o_payment_custom_field">
+                    <label for="last_name_paymee">Last Name:</label>
+                    <input type="text" id="last_name_paymee" name="last_name_paymee" class="form-control"/>
+                </div>
+                <div class="form-group o_payment_custom_field">
+                    <label for="email_paymee">Email:</label>
+                    <input type="email" id="email_paymee" name="email_paymee" class="form-control"/>
+                </div>
+                <div class="form-group o_payment_custom_field">
+                    <label for="phone_paymee">Phone:</label>
+                    <input type="text" id="phone_paymee" name="phone_paymee" class="form-control"/>
+                </div>
+                <div class="form-group o_payment_custom_field">
+                    <label for="return_url_paymee">Return URL:</label>
+                    <input type="text" id="return_url_paymee" name="return_url_paymee" class="form-control"/>
+                </div>
+                <div class="form-group o_payment_custom_field">
+                    <label for="cancel_url_paymee">Cancel URL:</label>
+                    <input type="text" id="cancel_url_paymee" name="cancel_url_paymee" class="form-control"/>
+                </div>
+                <div class="form-group o_payment_custom_field">
+                    <label for="webhook_url_paymee">Webhook URL:</label>
+                    <input type="text" id="webhook_url_paymee" name="webhook_url_paymee" class="form-control"/>
+                </div>
+                <div class="form-group o_payment_custom_field">
+                    <label for="order_id_paymee">Order ID:</label>
+                    <input type="text" id="order_id_paymee" name="order_id_paymee" class="form-control"/>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>
